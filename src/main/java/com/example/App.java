@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class App {
     public void start() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the URL to test: ");
+        System.out.print("Please enter the URL to test: ");
         String url = scanner.nextLine();
 
         HttpClient httpClient = HttpClients.createDefault();
@@ -18,7 +18,7 @@ public class App {
         try {
             HttpResponse response = httpClient.execute(request);
             int statusCode = response.getStatusLine().getStatusCode();
-            System.out.println("Response Status Code: " + statusCode);
+            System.out.println("Response Status Code Received: " + statusCode);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
